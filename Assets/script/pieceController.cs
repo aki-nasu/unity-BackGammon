@@ -14,7 +14,7 @@ public class pieceController : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log("MouseDown");
+        // Debug.Log("MouseDown");
         // このオブジェクトの位置(transform.position)をスクリーン座標に変換。
         screenPoint = Camera.main.WorldToScreenPoint(transform.position);
         // ワールド座標上の、マウスカーソルと、対象の位置の差分。
@@ -23,7 +23,7 @@ public class pieceController : MonoBehaviour
 
     void OnMouseDrag()
     {
-        Debug.Log("Drag");
+        // Debug.Log("Drag");
         Vector3 currentScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
         Vector3 currentPosition = Camera.main.ScreenToWorldPoint(currentScreenPoint) + this.offset;
         transform.position = currentPosition;
